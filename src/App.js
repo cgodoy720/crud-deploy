@@ -16,8 +16,10 @@ function App() {
         <Nav />
         <Routes>
           <Route path="/" element={<Home />} />
+          {/* This route will show all of the shows */}
           <Route path="/shows" element={<ShowsIndex />} />
           <Route path="/shows/new" element={<ShowsNewForm />} />
+          {/* This route below will allow us to send the id of a movie to the url address, from which we can use useParams in the component where we want to retrieve the id */}
           <Route path="/shows/:id" element={<Show />} />
           <Route path="/shows/:id/edit" element={<ShowsEditForm />} />
         </Routes>
